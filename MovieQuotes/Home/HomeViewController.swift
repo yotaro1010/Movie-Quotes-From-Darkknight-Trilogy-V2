@@ -171,7 +171,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        return testPopUpController(presentedViewController: presented, presenting: presenting)
+        return PopUpController(presentedViewController: presented, presenting: presenting)
     }
 }
 

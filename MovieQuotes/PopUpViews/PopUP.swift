@@ -6,7 +6,7 @@
 //
 import UIKit
 import Foundation
-class testPopUpController: UIPresentationController {
+class PopUpController: UIPresentationController {
     
     var overlayView = UIView()
     
@@ -19,14 +19,12 @@ class testPopUpController: UIPresentationController {
         overlayView.frame = containerView.bounds
         overlayView.backgroundColor = UIColor.black
 
-        overlayView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(testPopUpController.overlayViewDidTouch(_:)))]
+        overlayView.gestureRecognizers = [UITapGestureRecognizer(target: self, action: #selector(PopUpController.overlayViewDidTouch(_:)))]
         
         overlayView.alpha = 0.0
         
         containerView.addSubview(overlayView)
         
-        
-        // トランジションを実行
         presentedViewController.transitionCoordinator?.animate(alongsideTransition: {[weak self] context in
             self?.overlayView.alpha = 0.3
         }, completion:nil)

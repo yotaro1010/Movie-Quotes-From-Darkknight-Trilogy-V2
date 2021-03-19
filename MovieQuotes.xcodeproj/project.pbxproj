@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,8 +12,6 @@
 		0C0202B326041E02001E77E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C0202B126041E02001E77E6 /* LaunchScreen.storyboard */; };
 		0C0202BE26041E03001E77E6 /* MovieQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202BD26041E03001E77E6 /* MovieQuotesTests.swift */; };
 		0C0202C926041E03001E77E6 /* MovieQuotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202C826041E03001E77E6 /* MovieQuotesUITests.swift */; };
-		0C02031826041E25001E77E6 /* PopUpPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202DA26041E24001E77E6 /* PopUpPresentationController.swift */; };
-		0C02031926041E25001E77E6 /* TestPopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202DB26041E24001E77E6 /* TestPopUP.swift */; };
 		0C02031A26041E25001E77E6 /* PopUpViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202DC26041E24001E77E6 /* PopUpViews.swift */; };
 		0C02031B26041E25001E77E6 /* QuoteSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202DE26041E24001E77E6 /* QuoteSearchController.swift */; };
 		0C02031C26041E25001E77E6 /* QuoteSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0202DF26041E24001E77E6 /* QuoteSearchCell.swift */; };
@@ -68,6 +66,7 @@
 		0C02034D26041E25001E77E6 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02031526041E25001E77E6 /* HomeCollectionViewCell.swift */; };
 		0C02034E26041E25001E77E6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02031626041E25001E77E6 /* HomeViewController.swift */; };
 		0C02034F26041E25001E77E6 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02031726041E25001E77E6 /* HomeHeader.swift */; };
+		0C02036B260425FE001E77E6 /* PopUP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C02036A260425FE001E77E6 /* PopUP.swift */; };
 		900ECB926CC046CE3713034F /* Pods_MovieQuotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C65A5CD0325E8DDF2A0CA75 /* Pods_MovieQuotes.framework */; };
 		A779191F4243F1D1EE7EE25E /* Pods_MovieQuotes_MovieQuotesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48676C77D2CC75813AC9BD7 /* Pods_MovieQuotes_MovieQuotesUITests.framework */; };
 		ACBDF7C971B007B097CF1460 /* Pods_MovieQuotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA89B71EA0FA1A17982C956 /* Pods_MovieQuotesTests.framework */; };
@@ -103,8 +102,6 @@
 		0C0202C426041E03001E77E6 /* MovieQuotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieQuotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C0202C826041E03001E77E6 /* MovieQuotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieQuotesUITests.swift; sourceTree = "<group>"; };
 		0C0202CA26041E03001E77E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C0202DA26041E24001E77E6 /* PopUpPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpPresentationController.swift; sourceTree = "<group>"; };
-		0C0202DB26041E24001E77E6 /* TestPopUP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestPopUP.swift; sourceTree = "<group>"; };
 		0C0202DC26041E24001E77E6 /* PopUpViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViews.swift; sourceTree = "<group>"; };
 		0C0202DE26041E24001E77E6 /* QuoteSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteSearchController.swift; sourceTree = "<group>"; };
 		0C0202DF26041E24001E77E6 /* QuoteSearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteSearchCell.swift; sourceTree = "<group>"; };
@@ -159,6 +156,7 @@
 		0C02031526041E25001E77E6 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C02031626041E25001E77E6 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0C02031726041E25001E77E6 /* HomeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		0C02036A260425FE001E77E6 /* PopUP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUP.swift; sourceTree = "<group>"; };
 		2C65A5CD0325E8DDF2A0CA75 /* Pods_MovieQuotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieQuotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		347A256F4D5F40DFB8780986 /* Pods-MovieQuotes-MovieQuotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuotes-MovieQuotesUITests.release.xcconfig"; path = "Target Support Files/Pods-MovieQuotes-MovieQuotesUITests/Pods-MovieQuotes-MovieQuotesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		35935D47E4544B4C0D5F2FBB /* Pods-MovieQuotes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieQuotes.debug.xcconfig"; path = "Target Support Files/Pods-MovieQuotes/Pods-MovieQuotes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,13 +223,13 @@
 				0C0202A626041DFF001E77E6 /* AppDelegate.swift */,
 				0C0202A826041DFF001E77E6 /* SceneDelegate.swift */,
 				0C02031426041E25001E77E6 /* Home */,
-				0C02030826041E24001E77E6 /* Models */,
-				0C02030B26041E25001E77E6 /* MovieSearch */,
-				0C0202E026041E24001E77E6 /* MP3 */,
 				0C0202D926041E24001E77E6 /* PopUpViews */,
-				0C0202DD26041E24001E77E6 /* SearchQuote */,
 				0C02031026041E25001E77E6 /* SideMenu */,
+				0C0202DD26041E24001E77E6 /* SearchQuote */,
+				0C02030B26041E25001E77E6 /* MovieSearch */,
+				0C02030826041E24001E77E6 /* Models */,
 				0C0202B126041E02001E77E6 /* LaunchScreen.storyboard */,
+				0C0202E026041E24001E77E6 /* MP3 */,
 				0C02030726041E24001E77E6 /* Assets.xcassets */,
 				0C0202B426041E02001E77E6 /* Info.plist */,
 			);
@@ -259,8 +257,7 @@
 		0C0202D926041E24001E77E6 /* PopUpViews */ = {
 			isa = PBXGroup;
 			children = (
-				0C0202DA26041E24001E77E6 /* PopUpPresentationController.swift */,
-				0C0202DB26041E24001E77E6 /* TestPopUP.swift */,
+				0C02036A260425FE001E77E6 /* PopUP.swift */,
 				0C0202DC26041E24001E77E6 /* PopUpViews.swift */,
 			);
 			path = PopUpViews;
@@ -370,7 +367,6 @@
 				DCD59220290B173E394527CA /* Pods-MovieQuotesTests.debug.xcconfig */,
 				025BD88D6B7B82CFA1BE4932 /* Pods-MovieQuotesTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -665,12 +661,11 @@
 				0C02034426041E25001E77E6 /* MovieModel.swift in Sources */,
 				0C02034B26041E25001E77E6 /* SideMenuOption.swift in Sources */,
 				0C02034626041E25001E77E6 /* MovieSearchController.swift in Sources */,
+				0C02036B260425FE001E77E6 /* PopUP.swift in Sources */,
 				0C02034D26041E25001E77E6 /* HomeCollectionViewCell.swift in Sources */,
 				0C02034826041E25001E77E6 /* NetworkManeger.swift in Sources */,
-				0C02031926041E25001E77E6 /* TestPopUP.swift in Sources */,
 				0C02034F26041E25001E77E6 /* HomeHeader.swift in Sources */,
 				0C02034926041E25001E77E6 /* NetWorkManegerError.swift in Sources */,
-				0C02031826041E25001E77E6 /* PopUpPresentationController.swift in Sources */,
 				0C02034726041E25001E77E6 /* MovieSearchCell.swift in Sources */,
 				0C0202A726041DFF001E77E6 /* AppDelegate.swift in Sources */,
 				0C02031C26041E25001E77E6 /* QuoteSearchCell.swift in Sources */,

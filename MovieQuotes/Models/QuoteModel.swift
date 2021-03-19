@@ -114,7 +114,7 @@ Catwoman:  Where's the fun in that?
 """, quoteMp3name: "batman3", character: "BATMAN", imageName: "batman7"),
                 
                 Quotes(quote: """
-"I've sewn you up, I've set your bones, but I won't bury you. I've buried enough members of the Wayne family."
+"I won't bury you. I've buried enough members of the Wayne family."
 """, quoteMp3name: "alfred4", character: "Alfred Pennyworth", imageName: "alfred3"),
                 
                 Quotes(quote:  """
@@ -122,8 +122,8 @@ Catwoman:  Where's the fun in that?
 """ , quoteMp3name: "bane3", character: "BANE", imageName: "bane"),
                 
                 Quotes(quote:  """
- "you’re not living, you’re just waiting, hoping for things to go bad again. Remember when you left Gotham? Before all this, before Batman. You were gone seven years. Seven years I waited. Hoping that you wouldn’t come back. Every year I took a holiday, I went to Florence. There’s this café, on the banks of the Arno. Every fine evening I’d sit there and order a Fernet Branca. I had this fantasy that I would look across the tables and I’d see you there, with a wife, maybe a couple of kids. You wouldn’t say anything to me, nor me to you. But we’d both know that you’d made it, that you were happy. I never wanted you to come back to Gotham."
-""", quoteMp3name: "alfredo3", character: "Alfred Pennyworth", imageName: "alfred4"),
+ "Before Batman. You were gone seven years. Seven years I waited. Hoping that you wouldn’t come back."
+""", quoteMp3name: "alfred3", character: "Alfred Pennyworth", imageName: "alfred4"),
                 
                 Quotes(quote: """
 "When Gotham is ashes, then you have my permission to die."
