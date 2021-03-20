@@ -6,7 +6,7 @@ You can listen to some iconic quotes from movie "the Dark Knight trilogy" with t
 Also this application has Simple mobile application that allow you to search movies. The data will be retrieved from TheMovieDb. See API for details.(https://www.themoviedb.org)
 
 
-![movieQuotesGif](https://user-images.githubusercontent.com/74696274/111885991-70b4bb80-8a0e-11eb-8b06-cf0c532202cc.gif width="300")
+![movieQuotesGif](img src= https://user-images.githubusercontent.com/74696274/111885991-70b4bb80-8a0e-11eb-8b06-cf0c532202cc.gif width="300")
 
 
 #Preview
