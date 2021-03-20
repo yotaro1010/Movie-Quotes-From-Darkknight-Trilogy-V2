@@ -18,6 +18,7 @@ Here is short GIF preview which demonstrates design and features of the App.
 
 ## Library used in app
 https://github.com/jonkykong/SideMenu
+SideMenu
 
 ## Author
 [wantedly](https://www.wantedly.com/id/yotaro_ito)
