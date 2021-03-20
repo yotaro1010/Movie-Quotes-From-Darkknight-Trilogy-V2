@@ -7,7 +7,7 @@ Also this application has Simple mobile application that allow you to search mov
 
 #Preview
 Here is short GIF preview which demonstrates design and features of the App.
-![gif](https://github.com/kotabrog/ft_mini_ls/blob/main/image/ft_mini_ls.gif)
+![movieQuotesGif](https://user-images.githubusercontent.com/74696274/111885823-8970a180-8a0d-11eb-9715-7792e171ec3d.gif)
 
 ## Author
 [wantedly](https://www.wantedly.com/id/yotaro_ito)
