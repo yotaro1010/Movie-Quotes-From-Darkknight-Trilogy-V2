@@ -10,7 +10,8 @@ cellをタップすると、セリフごとのカードが表示され、playボ
 TheMovieDb (https://www.themoviedb.org)
 
 You can listen to some iconic quotes from movie series "the Dark Knight trilogy" with tapping collectionView cell. 
-Also this application has Simple mobile application that allow you to search movies. The data will be retrieved from TheMovieDb. See API for details.(https://www.themoviedb.org)
+Also it has Simple mobile application that allow you to search movies with movie title. 
+The data will be retrieved from TheMovieDb. See API for details.(https://www.themoviedb.org)
 
 ### Preview
 Here is short GIF preview which demonstrates design and features of the App.
