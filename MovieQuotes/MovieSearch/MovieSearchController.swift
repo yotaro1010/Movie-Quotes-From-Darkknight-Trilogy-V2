@@ -116,7 +116,9 @@ extension MovieSearchController: UITableViewDataSource, UITableViewDelegate {
     
         let url = "https://www.themoviedb.org/movie/\(listOfMovies[indexPath.row].id ?? 0))"
          let VC = SFSafariViewController(url: URL(string: url)!)
-         present(VC, animated: true)
+        DispatchQueue.main.async {
+            self.present(VC, animated: true)
+        }
     }
 }
 
@@ -129,15 +131,14 @@ extension MovieSearchController: UISearchBarDelegate{
             return
         }
         
-        networker.searchMovie(query: text) { [weak self] result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let finalResult):
-                self?.listOfMovies = finalResult.movies
-            }
-        }
+        networker.searchMovie(query: text, successHandler: {[weak self] (result) in
+            self?.listOfMovies = result.movies
+        }, errorHandler: {(error) in
+            print(error)
+        })
     }
-}
+      
+    }
+
 
 

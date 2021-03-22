@@ -9,25 +9,27 @@ import XCTest
 @testable import MovieQuotes
 
 class MovieQuotesTests: XCTestCase {
+    
+    let networkManeger = NetworkManeger()
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testSearchMovie(){
+        
+        let expectation = self.expectation(description: "Search for Batman Movies")
+        networkManeger.searchMovie(query:"batman", successHandler: {(result) in
+            XCTAssertNotNil(result)
+        }, errorHandler: {(error) in
+            XCTAssertNil(error)
+        })
+        expectation.fulfill()
+        self.waitForExpectations(timeout: 10.0, handler: nil)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func setUp() {
+        super.setUp()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    override func tearDown() {
+        super.tearDown()
     }
 
 }

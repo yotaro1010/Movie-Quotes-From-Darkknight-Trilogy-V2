@@ -19,67 +19,13 @@ public class NetworkManeger {
     private var imageUrlString: String = ""
     private var cacheimages = NSCache<NSString, NSData>()
 
-    func searchMovie(query: String, completion: @escaping (Result<MovieResponse, MovieError>) -> Void) {
-        guard var urlComponents = URLComponents(string: "\(baseAPIURL)/search/movie") else {
-            completion(.failure(MovieError.invalidEndpoint))
-            print("invalid URL")
-            return
-        }
-        
-        urlComponents.queryItems =
-            [URLQueryItem(name: "api_key", value: apiKey),
-             URLQueryItem(name: "language", value: "en-US"),
-             URLQueryItem(name: "include_adult", value: "false"),
-             URLQueryItem(name: "region", value: "US"),
-             URLQueryItem(name: "query", value: query),
-            ]
-        
-        guard let url = urlComponents.url else {
-//            errorHandler(MovieError.invalidEndpoint)
-            completion(.failure(MovieError.invalidEndpoint))
-            print("invalid URL")
-
-            return
-        }
-        
-        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-
-                completion(.failure(MovieError.apiError))
-                print("DataTask error: \(error.localizedDescription)")
-                return
-            }
-            
-            completion(.failure(MovieError.invalidResponse))
-         
-            guard let response = response as? HTTPURLResponse else {
-                print("Empty Response")
-                return
-            }
-            print("Response status code: \(response.statusCode)")
-            
-            guard let data = data else {
-                completion(.failure(MovieError.noData))
-                print("No data")
-
-                return
-            }
-            
-            do {
-                let moviesResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
-                DispatchQueue.main.async {
-
-                    completion(.success(moviesResponse))
-                }
-            } catch {
-
-                completion(.failure(MovieError.serializationError))
-                print("Json error")
+    private func handleError(errorHandler: @escaping(_ error: Error) -> Void, error: Error) {
+           DispatchQueue.main.async {
+               errorHandler(error)
            }
-        }
-        dataTask?.resume()
-        
-    }
+       }
+    
+   
             
   private func cachingImages(imageURL: URL, completion: @escaping (Data?, Error?) -> (Void)) {
         if let imageData = cacheimages.object(forKey: imageURL.absoluteString as NSString){
@@ -125,5 +71,62 @@ public class NetworkManeger {
         
         let url = URL(string: imageUrlString)!
         cachingImages(imageURL: url, completion: completion)
+    }
+}
+
+extension NetworkManeger: NetworkManegerProtocol{
+    
+    func searchMovie(query: String, successHandler: @escaping (MovieResponse) -> Void, errorHandler: @escaping (Error) -> Void) {
+        guard var urlComponents = URLComponents(string: "\(baseAPIURL)/search/movie") else {
+            
+            errorHandler(MovieError.invalidEndpoint)
+            print("invalid URL")
+            return
+        }
+        
+        urlComponents.queryItems =
+            [URLQueryItem(name: "api_key", value: apiKey),
+             URLQueryItem(name: "language", value: "en-US"),
+             URLQueryItem(name: "include_adult", value: "false"),
+             URLQueryItem(name: "region", value: "US"),
+             URLQueryItem(name: "query", value: query),
+            ]
+        
+        guard let url = urlComponents.url else {
+            errorHandler(MovieError.invalidEndpoint)
+            
+            print("invalid URL")
+
+            return
+        }
+        
+        dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if  error != nil  {
+                self.handleError(errorHandler: errorHandler, error: MovieError.apiError)
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse else {
+                self.handleError(errorHandler: errorHandler, error: MovieError.invalidResponse)
+                return
+            }
+            
+            print("Response status code: \(response.statusCode)")
+            
+            guard let data = data else {
+                self.handleError(errorHandler: errorHandler, error: MovieError.noData)
+                return
+            }
+            
+            do {
+                let moviesResponse = try JSONDecoder().decode(MovieResponse.self, from: data)
+                DispatchQueue.main.async {
+                    successHandler(moviesResponse)
+                }
+            } catch {
+                self.handleError(errorHandler: errorHandler, error: MovieError.serializationError)
+           }
+        }
+        dataTask?.resume()
     }
 }
