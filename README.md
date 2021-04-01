@@ -24,3 +24,4 @@ SideMenu https://github.com/jonkykong/SideMenu
 
 ## Author
 [wantedly](https://www.wantedly.com/id/yotaro_ito)
+[github](https://github.com/yotaro1010)
