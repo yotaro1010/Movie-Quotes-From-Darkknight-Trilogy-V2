@@ -6,7 +6,7 @@
 
 映画ダークナイト三部作から印象的なセリフを聞くことができるアプリです。
 cellをタップすると、セリフごとのカードが表示され、playボタンを押すことでセリフを聞くことができます。
-また。この機能の他にアプリ内セリフ検索機能とTheMovieDataBaseのAPIを用いた映画検索機能を搭載しています。
+またこの機能の他にアプリ内セリフ検索機能とTheMovieDataBaseAPIを用いた映画検索機能を搭載しています。
 TheMovieDataBase (https://www.themoviedb.org)
 
 You can listen to some iconic quotes from movie series "the Dark Knight trilogy" with tapping collectionView cell. 
